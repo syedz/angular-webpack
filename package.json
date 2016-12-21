@@ -13,6 +13,7 @@
   "devDependencies": {
     "babel-loader": "^6.2.10",
     "css-loader": "^0.26.1",
+    "ng-annotate-loader": "^0.2.0",
     "raw-loader": "^0.5.1",
     "style-loader": "^0.13.1",
     "stylus-loader": "^2.4.0",

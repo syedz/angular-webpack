@@ -12,7 +12,7 @@ var config = {
     loaders: [
       {
         test: /\.js$/,
-        loader: 'babel', // can also use babel-loader
+        loader: 'ng-annotate!babel', // can also use babel-loader
         exclude: /node_modules/
       },
       {
@@ -36,6 +36,8 @@ var config = {
 
 if (process.env.NODE_ENV === 'production') {
   config.output.path = __dirname + '/dist';
+  // config.plugins.push(new webpack.optimize.UglifyJsPlugin());
+  config.devtool = 'source-map';
 }
 
 module.exports = config;

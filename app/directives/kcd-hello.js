@@ -1,5 +1,5 @@
 module.exports = function(ngModule) {
-  ngModule.directive('kcdHello', function() {
+  ngModule.directive('kcdHello', function($log) {
     require('./kcd-hello.css');
 
     return {
@@ -13,6 +13,7 @@ module.exports = function(ngModule) {
         var vm = this;
 
         vm.greeting = 'Hello webpack';
+        $log.info('I have some info');
       }
     };
   });
